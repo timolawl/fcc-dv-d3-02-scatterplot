@@ -1,0 +1,123 @@
+$primary-color: #f06060;
+
+@import url('//fonts.googleapis.com/css?family=Lato');
+
+*, :before, :after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Lato;
+  overflow: hidden;
+}
+
+body {
+  background-image: url('//res.cloudinary.com/timolawl/image/upload/v1459214744/Alpe_dHuez.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.chart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 12px;
+  
+  &:link, &:visited {
+    color: $primary-color;
+  }
+  &:active, &:hover {
+    color: lighten($primary-color, 20%);
+  }
+}
+
+svg {
+  background: rgba(255,255,255, 0.7);
+  box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.tooltip {
+  position: absolute;
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.2);
+  width: 150px;
+  height: auto;
+  padding: 4px;
+  font-size: 12px;
+  background: $primary-color;
+  pointer-events: none;
+}
+
+.sources {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  &--title {
+    color: white;
+    opacity: 0.5;
+  }
+  &--text {
+    
+  }
+}
+
+.axis path, 
+.axis line {
+  fill: none;
+  stroke: black;
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
+}
+
+.axis text{
+  font-size: 14px;
+}
+
+.label {
+  fill: $primary-color;
+  &--title {
+    font-size: 2rem;
+    font-family: Lato;
+    font-weight: bold;
+  }
+}
+
+
+.legend {
+  font-size: 14px;
+}
+
+.cyclist {
+  &--name {
+    font-size: 12px;
+    cursor: default;
+  }
+  &--textname {
+    font-weight: bold;
+  }
+}
+
+.dot {
+  stroke: $primary-color;
+  stroke-width: 1px;
+  opacity: 0.65;
+}
+
+.active {
+  &--dot {
+    opacity: 1;
+    stroke: $primary-color;
+    stroke-width: 2px;
+    cursor: default;
+  }
+  &--name {
+    font-weight: bold;
+  }
+  
+}
